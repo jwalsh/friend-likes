@@ -1,13 +1,23 @@
 <html>
   <head>
     <title>Compare Your Friends on Facebook</title>
-    <link rel="stylesheet" href="styles/wpogfc.css" />
+    <link rel="stylesheet" href="styles/app.css" />
   </head>
   <body>
 
-    <p id="login"><fb:login-button 
-	  perms="user_likes,friends_likes"
-	  autologoutlink="true"></fb:login-button></p>
+
+    <p id="login">
+      <fb:login-button 
+	      perms="user_likes,friends_likes"
+	      autologoutlink="true"></fb:login-button>
+    
+      <br/>
+      <input type="text" id="registrationId" value="12345678"/>
+      <button id="login-button">App Login</button>
+
+      <br/>
+      <button id="disconnect-button">Disconnect</button>
+    </p>
 
 
     <h1>Compare Your Friends on Facebook</h1>
@@ -30,6 +40,10 @@
     </div>
 
     <div id="fb-root"></div>
+
+    <script type="text/javascript" 
+	    src="lib/cookie.js">
+    </script>
 
     <script type="text/javascript" 
 	    src="lib/jquery-1.4.4.js">
